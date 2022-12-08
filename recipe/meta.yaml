@@ -1,5 +1,5 @@
 {% set name = "sbol_factory" %}
-{% set version = "1.0" %}
+{% set version = "1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/SynBioDex/sbol_factory/archive/v{{ version }}.tar.gz
-  sha256: b934a1ad715c7da4e0295dab267e7c1d888d012434cc5be9e9c7cfef8093b343
+  sha256: 5dda02132227b23675c5249609bb2222e97ad22b09db66afb1998bdce75d9b34
 
 build:
   number: 0
