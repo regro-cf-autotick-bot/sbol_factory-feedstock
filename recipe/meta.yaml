@@ -10,16 +10,16 @@ source:
   sha256: f2e9f92eb4ba614835cb9dfca30926b49bd4bed96b5fceac5717acba0880254c
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install -vv .
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - pysbol3 >=1.0.1
     - sparqlwrapper >=1.8.5
     - pyshacl >=0.13.3
@@ -30,6 +30,8 @@ requirements:
     - PyPDF2
 
 test:
+  requires:
+    - python {{ python_min }}
   source_files:
     - test
   imports:
